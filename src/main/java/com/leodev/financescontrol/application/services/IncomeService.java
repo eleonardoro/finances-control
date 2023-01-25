@@ -3,7 +3,6 @@ package com.leodev.financescontrol.application.services;
 import com.leodev.financescontrol.adapter.in.incomes.IncomeRequest;
 import com.leodev.financescontrol.adapter.out.IncomeRepository;
 import com.leodev.financescontrol.application.port.in.RegisterIncomeUseCase;
-import com.leodev.financescontrol.application.port.out.IncomePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

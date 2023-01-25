@@ -1,8 +1,6 @@
 package com.leodev.financescontrol.adapter.in.incomes;
 
-import com.leodev.financescontrol.application.port.in.RegisterIncomeUseCase;
 import com.leodev.financescontrol.application.services.IncomeService;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
