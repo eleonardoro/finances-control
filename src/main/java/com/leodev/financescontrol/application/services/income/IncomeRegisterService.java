@@ -1,4 +1,4 @@
-package com.leodev.financescontrol.application.services;
+package com.leodev.financescontrol.application.services.income;
 
 import com.leodev.financescontrol.adapter.in.incomes.IncomeRequest;
 import com.leodev.financescontrol.adapter.out.IncomeRepository;

@@ -1,7 +1,9 @@
 package com.leodev.financescontrol.application.port.in;
 
+import com.leodev.financescontrol.application.domain.consolidated.ConsolidatedResponse;
+
 public interface ConsolidatedUseCase {
 
-    boolean execute(String month);
+    ConsolidatedResponse execute(String month);
 }
 

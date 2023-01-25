@@ -5,6 +5,7 @@ import com.leodev.financescontrol.application.domain.income.enums.INCOME_RECURRE
 import com.leodev.financescontrol.application.domain.income.enums.INCOME_STATUS;
 import com.leodev.financescontrol.application.domain.income.enums.INCOME_TYPE;
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
@@ -12,7 +13,7 @@ import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
-
+@Getter
 public class Income {
 
     @Id
@@ -46,6 +47,7 @@ public class Income {
     private INCOME_STATUS status;
     @Column
     private String comment;
+
 
     public Income(String debitor, String description, INCOME_TYPE incomeType, LocalDate date, BigDecimal incomeValue, INCOME_PAYMENT_METHOD paymentMethod, boolean recurrent, INCOME_RECURRENCE_TYPE recurrenceType, int recurrencesToPay, int recurrencesPaid, INCOME_STATUS status, String comment) {
         this.debitor = debitor;

@@ -1,7 +1,7 @@
 package com.leodev.financescontrol.adapter.in.incomes;
 
-import com.leodev.financescontrol.application.services.IncomeFindByMonthService;
-import com.leodev.financescontrol.application.services.IncomeRegisterService;
+import com.leodev.financescontrol.application.services.income.IncomeFindByMonthService;
+import com.leodev.financescontrol.application.services.income.IncomeRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

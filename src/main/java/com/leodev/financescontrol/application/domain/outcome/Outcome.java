@@ -5,13 +5,14 @@ import com.leodev.financescontrol.application.domain.outcome.enums.OUTCOME_RECUR
 import com.leodev.financescontrol.application.domain.outcome.enums.OUTCOME_STATUS;
 import com.leodev.financescontrol.application.domain.outcome.enums.OUTCOME_TYPE;
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Entity
 @NoArgsConstructor
-
+@Getter
 public class Outcome {
 
     @Id
