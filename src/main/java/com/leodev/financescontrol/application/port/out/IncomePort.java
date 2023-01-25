@@ -5,4 +5,6 @@ import com.leodev.financescontrol.adapter.in.incomes.IncomeRequest;
 public interface IncomePort {
 
     void save(IncomeRequest incomeRequest);
+
+    void findByMonth(String month);
 }

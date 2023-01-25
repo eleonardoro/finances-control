@@ -10,17 +10,19 @@ import com.leodev.financescontrol.application.domain.income.enums.INCOME_TYPE;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @Setter
 public class IncomeRequest {
     //TODO validar objetos
-    private INCOME_TYPE incomeType;
-    private String debitor;
-
     private String description;
 
-    private String date;
+    private String debitor;
+
+    private INCOME_TYPE incomeType;
+
+    private LocalDate date;
 
     private BigDecimal incomeValue;
 

@@ -5,13 +5,12 @@ import com.leodev.financescontrol.application.domain.income.enums.INCOME_RECURRE
 import com.leodev.financescontrol.application.domain.income.enums.INCOME_STATUS;
 import com.leodev.financescontrol.application.domain.income.enums.INCOME_TYPE;
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
-@Data
 @NoArgsConstructor
 
 public class Income {
@@ -27,14 +26,14 @@ public class Income {
     @Enumerated(EnumType.STRING)
     private INCOME_TYPE incomeType;
     @Column
-    private String date;
+    private LocalDate date;
     @Column
     private BigDecimal incomeValue;
     @Column(name = "payment_method")
     @Enumerated(EnumType.STRING)
     private INCOME_PAYMENT_METHOD paymentMethod;
     @Column()
-    private boolean isRecurrent;
+    private boolean recurrent;
     @Column
     @Enumerated(EnumType.STRING)
     private INCOME_RECURRENCE_TYPE recurrenceType;
@@ -48,14 +47,14 @@ public class Income {
     @Column
     private String comment;
 
-    public Income(String debitor, String description, INCOME_TYPE incomeType, String date, BigDecimal incomeValue, INCOME_PAYMENT_METHOD paymentMethod, boolean isRecurrent, INCOME_RECURRENCE_TYPE recurrenceType, int recurrencesToPay, int recurrencesPaid, INCOME_STATUS status, String comment) {
+    public Income(String debitor, String description, INCOME_TYPE incomeType, LocalDate date, BigDecimal incomeValue, INCOME_PAYMENT_METHOD paymentMethod, boolean recurrent, INCOME_RECURRENCE_TYPE recurrenceType, int recurrencesToPay, int recurrencesPaid, INCOME_STATUS status, String comment) {
         this.debitor = debitor;
         this.description = description;
         this.incomeType = incomeType;
         this.date = date;
         this.incomeValue = incomeValue;
         this.paymentMethod = paymentMethod;
-        this.isRecurrent = isRecurrent;
+        this.recurrent = recurrent;
         this.recurrenceType = recurrenceType;
         this.recurrencesToPay = recurrencesToPay;
         this.recurrencesPaid = recurrencesPaid;
